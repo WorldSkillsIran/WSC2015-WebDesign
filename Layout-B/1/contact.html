@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <title>CONFIDENTIAL - Module B Test Project</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/website.css">
+  <!--<script src="js/prefix-free.js"></script>-->
+  <script src="js/jquery.js"></script>
+  <script src="js/website.js"></script>
+</head>
+<body>
+  <header role="banner">
+    <h1><a href="index.html">Kings Burger</a></h1>
+    <nav>
+      <ul>
+        <li><a href="restaurant.html">Restaurant</a></li>
+        <li><a href="photo-view.html">Photos</a></li>
+        <li class='active'><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+    <p>Your comments are important to us. </p>
+    <div class="success label">
+      Form sumbitted successfully.
+    </div>
+    <div class="alert label">
+      Form submissing failed. It seems that you’re offline now.
+    </div>
+    <div class='tab-panel'>
+      <div class='tabs'> <!-- Tab navigation -->
+        <a href='#tab1'>Restaurant Review</a>
+        <a href='#tab2'>Job Applying</a>
+        <a href='#tab3'>Others</a>
+      </div>
+      <div id='tab1' class='tab-content'>
+        <h2>Restaurant Review</h2>
+        <form action='#' method='get'>
+          <fieldset>
+            <label for='form1-name'>Your Name</label>
+            <input type='text' id='form1-name'>
+          </fieldset>
+          <fieldset>
+            <label for='form1-ate'>What you ate?</label>
+            <input type='text' id='form1-ate'>
+          </fieldset>
+          <fieldset>
+            <label for='form1-comments'>Your comments on the food</label>
+            <input type='text' id='form1-comments'>
+          </fieldset>
+          <fieldset>
+            <label for='form1-rating'>How you rate? <span>0-5</span></label>
+            <input type='number' id='form1-rating'>
+          </fieldset>
+          <input type='submit' value='Submit Review'>
+        </form>
+      </div>
+      <div id='tab2' class='tab-content'>
+        <h2>Job Applying</h2>
+        <form action='#' method='get'>
+          <fieldset>
+            <label for='form2-name'>Your Name</label>
+            <input type='text' id='form2-name'>
+          </fieldset>
+          <fieldset>
+            <label for='form2-email'>Your Email</label>
+            <input type='email' id='form2-email'>
+          </fieldset>
+          <fieldset>
+            <label for='form2-ate'>Which position do you want to apply?</label>
+            <input type='text' id='form2-ate'>
+          </fieldset>
+          <fieldset>
+            <label for='form2-resume'>Your resume: </label>
+            <textarea id='form2-resume'></textarea>
+          </fieldset>
+          <fieldset>
+            <label for='form2-rating'>How you rate? <span>0-5</span></label>
+            <input type='number' id='form2-rating'>
+          </fieldset>
+          <input type='submit' value='Submit Job Application'>
+        </form>
+      </div>
+
+      <div id='tab3' class='tab-content'>
+        <h2>Others</h2>
+        <form action='#' method='get'>
+          <fieldset>
+            <label for='form3-name'>Your Name</label>
+            <input type='text' id='form3-name'>
+          </fieldset>
+          <fieldset>
+            <label for='form2-email'>Your Email</label>
+            <input type='email' id='form2-email'>
+          </fieldset>
+          <fieldset>
+            <label for='form3-comments'>Your comments: </label>
+            <textarea id='form3-comments'></textarea>
+          </fieldset>
+          <input type='submit' value='Submit Comments'>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2015. WorldSkills.
+  </footer>
+
+</body>
+</html>
