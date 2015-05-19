@@ -6,11 +6,11 @@
   <title>CONFIDENTIAL - Module B Test Project</title>
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/website.css">
-  <script src="js/prefix-free.js"></script>
+  <!--<script src="js/prefix-free.js"></script>-->
   <script src="js/jquery.js"></script>
   <script src="js/website.js"></script>
 </head>
-<body>
+<body role="application">
   <header role="banner">
     <h1><a href="index.html">Kings Burger</a></h1>
     <nav>
@@ -25,9 +25,9 @@
   <main>
     <h2>Photo Gallery</h2>
 
-    <figure>
+    <figure role="slider" aria-label="Nice environment for your afternoon.">
       <img src="images/tea2.jpg" alt="Tea">
-      <figcaption>Nice environment for your afternoon.</figcaption>
+      <figcaption aria-hidden="true">Nice environment for your afternoon.</figcaption>
     </figure>
 
     <div class="share">
@@ -39,13 +39,13 @@
       </ul>
     </div>
 
-    <nav>
+    <nav role="navigation">
       <div class="pagination">Photo 3 / 10</div>
-      <a href="photo-view.html">
+      <a href="photo-view.html" role="button" aria-label="Previous">
         <span>Previous Photo</span>
         <img src="images/steam.jpg" alt="Tea">
       </a>
-      <a href="photo-view.html">
+      <a href="photo-view.html" role="button" aria-label="Next">
         <span>Next Photo</span>
         <img src="images/topdown.jpg" alt="Top down">
       </a>

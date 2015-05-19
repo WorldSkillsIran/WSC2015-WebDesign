@@ -10,7 +10,7 @@
   <script src="js/jquery.js"></script>
   <script src="js/website.js"></script>
 </head>
-<body>
+<body role="application">
   <header role="banner">
     <h1><a href="index.html">Kings Burger</a></h1>
     <nav>
@@ -25,19 +25,19 @@
   <main>
     <h2>Contact Us</h2>
     <p>Your comments are important to us. </p>
-    <div class="success label">
+    <div class="success label" role="dialog">
       Form sumbitted successfully.
     </div>
-    <div class="alert label">
+    <div class="alert label" role="dialog">
       Form submissing failed. It seems that you’re offline now.
     </div>
     <div class='tab-panel'>
-      <div class='tabs'> <!-- Tab navigation -->
-        <a href='#tab1'>Restaurant Review</a>
-        <a href='#tab2'>Job Applying</a>
-        <a href='#tab3'>Others</a>
+      <div class='tabs' role="tablist"> <!-- Tab navigation -->
+        <a href='#tab1' role="tab" aria-label="Restaurant Review">Restaurant Review</a>
+        <a href='#tab2' role="tab" aria-label="Job Applying">Job Applying</a>
+        <a href='#tab3' role="tab" aria-label="Others">Others</a>
       </div>
-      <div id='tab1' class='tab-content'>
+      <div id='tab1' role="tabpanel" class='tab-content'>
         <h2>Restaurant Review</h2>
         <form action='#' method='get'>
           <fieldset>
@@ -59,7 +59,7 @@
           <input type='submit' value='Submit Review'>
         </form>
       </div>
-      <div id='tab2' class='tab-content'>
+      <div id='tab2' role="tabpanel" class='tab-content' aria-label="Job Applying">
         <h2>Job Applying</h2>
         <form action='#' method='get'>
           <fieldset>
@@ -82,11 +82,11 @@
             <label for='form2-rating'>How you rate? <span>0-5</span></label>
             <input type='number' id='form2-rating'>
           </fieldset>
-          <input type='submit' value='Submit Job Application'>
+          <input type='submit' value='Submit Job Application' role="button">
         </form>
       </div>
 
-      <div id='tab3' class='tab-content'>
+      <div id='tab3' role="tabpanel" class='tab-content' aria-label="Others">
         <h2>Others</h2>
         <form action='#' method='get'>
           <fieldset>
@@ -95,13 +95,13 @@
           </fieldset>
           <fieldset>
             <label for='form2-email'>Your Email</label>
-            <input type='email' id='form2-email'>
+            <input type='email' id='form2-email' role="button">
           </fieldset>
           <fieldset>
             <label for='form3-comments'>Your comments: </label>
             <textarea id='form3-comments'></textarea>
           </fieldset>
-          <input type='submit' value='Submit Comments'>
+          <input type='submit' value='Submit Comments' role="button">
         </form>
       </div>
     </div>
