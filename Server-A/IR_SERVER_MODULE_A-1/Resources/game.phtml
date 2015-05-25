@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Towers of hanoi</title>
+    <link rel="stylesheet" href="<?= BASE_URL ?>Resources/styles.css"/>
+</head>
+<body>
+<div class="stacks">
+    <h3 style="text-align: center; text-transform: uppercase"><?= $game->getPlayerName() ?>
+        - <?= $game->getMoves() ?></h3>
+    <p><?= $error ?></p>
+    <?php
+    if ($game->win()) {
+        ?>
+        <h2 style="text-align: center;">You won the game !</h2>
+        <p><a href="<?= BASE_URL ?>">Start</a></p>
+    <?php
+    } else {
+        foreach ($game->stacks as $i => $stack) {
+            ?>
+            <div class="column">
+                <div class="stack" id="stack1" data-stack="<?= $i ?>">
+                    <?php
+                    foreach ($stack as $brick) {
+                        ?>
+                        <div class="brick" data-value="<?= $brick->id ?>"></div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        <?php
+        }
+    }
+    ?>
+</div>
+<script src="<?= BASE_URL ?>Resources/jquery-2.1.1.js"></script>
+<script src="<?= BASE_URL ?>Resources/script.js"></script>
+</body>
+</html>

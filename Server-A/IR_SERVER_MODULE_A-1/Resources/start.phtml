@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Towers of hanoi</title>
+    <link rel="stylesheet" href="<?= BASE_URL ?>Resources/styles.css"/>
+</head>
+<body>
+<div class="stacks">
+    <form method="post" action="<?= BASE_URL ?>game/start">
+        <h3>Start a game</h3>
+
+        <label style="display: block;">
+            Difficulty:
+            <select name="bricks" required="required">
+                <option value="3">Easy [3]</option>
+                <option value="4">Medium [4]</option>
+                <option value="5">Hard [5]</option>
+            </select>
+        </label>
+
+        <label style="display: block;">
+            Your name:
+
+            <input type="text" name="name" required="required"/>
+        </label>
+
+        <button>Start game</button>
+    </form>
+</div>
+<script src="<?= BASE_URL ?>jquery-2.1.1.js"></script>
+<script src="<?= BASE_URL ?>script.js"></script>
+</body>
+</html>
