@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Brickz</title>
+    <link rel="stylesheet" href="<?= BASE_URL ?>/Application/Resources/static/style.css">
+</head>
+<body>
+<div class="title">
+    <h1>The Brickz</h1>
+
+    <p><?= $result->message ?></p>
+    <p><?= $game->getPlayerName() ?> - <span class="moves"><?= $game->getMoves() ?></span></p>
+    <a href="<?= BASE_URL ?>">Config Again</a>
+
+    <?php if ($game->win()) {
+        ?>
+        <h3>You won!</h3>
+    <?php
+    }
+    ?>
+
+</div>
+<div class="container">
+    <?php
+    foreach ($game->stacks as $stack) {
+        ?>
+
+        <div data-id="<?= $stack->id ?>" id="stack<?= $stack->id - 1 ?>" class="stack">
+            <div class="bar"></div>
+            <div class="bricks">
+                <?php
+                foreach ($stack as $brick) {
+                    ?>
+                    <div data-id="<?= $brick->id ?>" class="brick b<?= $brick->id ?>"></div>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+    <?php
+    }
+    ?>
+</div>
+<script src="<?= BASE_URL ?>/Application/Resources/static/jquery-2.1.4.min.js"></script>
+<script src="<?= BASE_URL ?>/Application/Resources/static/script.js"></script>
+</body>
+</html>

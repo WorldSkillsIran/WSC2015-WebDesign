@@ -1,0 +1,138 @@
+html,body{padding:0;margin: 0}
+
+
+a,a:link,a:visited{
+	color: #ccc;
+}
+
+.title{
+	text-align: center;
+	font-family: 'Trebuchet MS';
+	margin-top:50px;
+}
+.title h1,.title p{
+	margin: 0;
+	padding: 0;
+}
+
+.stack{
+	width: 300px;
+	height: 300px;
+	border: 1px solid #eee;
+	float: left;
+	margin-left: 10px;
+	position: relative;
+	overflow: hidden;
+	transition: 0.1s all;
+	cursor: pointer;
+	
+	display: table-cell;
+	vertical-align: bottom;
+}
+
+.stack:hover{
+	border: 1px solid rgba(0,0,0,0.7);
+}
+
+.cursor{
+	cursor: pointer;
+}
+
+.container {
+    height: 300px;
+    margin: auto;
+    width: 940px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: table;
+}
+
+
+.container form{
+	text-align: center;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	left:0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+}
+.container form * {
+	height: 30px;
+	width: 200px;
+	display: block;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	font-size: 18px;
+	margin-top: 10px;
+	background-color: #eee;
+	color: black;
+}
+
+
+
+.bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 10px;
+    height: 75%;
+    background-color: #ddd;
+    bottom: -5px;
+    border-radius: 5px;
+}
+
+.brick {
+    height: 20px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s all;
+    z-index: 99;
+    
+}
+
+.bricks{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.brick.selected{
+	border: 1px solid rgba(0,0,0,0.7);
+
+}
+
+.brick.b0 {
+    background-color: rgba(255,0,0,0.8);
+    width: 20%;
+}
+
+.brick.b1 {
+    background-color: rgba(255,0,255,0.8);
+    width: 30%;
+}
+
+.brick.b2 {
+    width: 40%;
+    background-color: rgba(0,0,255,0.8);
+}
+
+.brick.b3 {
+    width: 50%;
+    background-color: rgba(255,255,0,0.8);
+}
+
+.brick.b4 {
+    width: 60%;
+    background-color: rgba(0,255,255,0.8);
+}
